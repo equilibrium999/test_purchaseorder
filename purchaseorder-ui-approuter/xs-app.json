@@ -1,0 +1,19 @@
+{
+    "welcomeFile": "/ui/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/myapi/odata/v4/(.*)$",
+            "target": "/odata/v4/$1",
+            "authenticationType": "xsuaa",
+            "destination": "destination_purchaseorder_ui",
+            "csrfProtection": false
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "service": "html5-apps-repo-rt",
+            "authenticationType": "xsuaa"
+        }
+    ]
+}
